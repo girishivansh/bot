@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krishi-Line WhatsApp Simulator | Nashik Onion Procurement Bot</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧅</text></svg>">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- WhatsApp Mobile/Desktop Phone Mockup Frame -->
+    <main class="phone-wrapper" role="main">
+      <div class="phone-container">
+        <!-- Phone Top Status Bar -->
+        <header class="status-bar" aria-hidden="true">
+          <span class="status-time" id="status-clock">09:41</span>
+          <div class="status-notch"></div>
+          <div class="status-icons">
+            <span title="Signal">📶</span>
+            <span title="Wi-Fi">🛜</span>
+            <span title="Battery">🔋</span>
+          </div>
+        </header>
+
+        <!-- WhatsApp Chat Header -->
+        <header class="chat-header">
+          <div class="header-left">
+            <button class="back-btn" aria-label="Go back" title="Back">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            </button>
+            <div class="bot-avatar-container">
+              <div class="bot-avatar" aria-hidden="true">🧅</div>
+              <span class="verified-badge" title="Official Verified Business">✓</span>
+            </div>
+            <div class="bot-info">
+              <div class="bot-name-row">
+                <h1 class="bot-name">Krishi-Line Bot</h1>
+                <span class="verified-icon" title="Official WhatsApp Business Account">
+                  <svg viewBox="0 0 18 18" width="14" height="14" fill="#00a884"><path d="M9 0L11.5 2.5L15 2L15.5 5.5L18 8L16.5 11L17.5 14.5L14 15.5L12 18L9 16.5L6 18L4 15.5L0.5 14.5L1.5 11L0 8L2.5 5.5L3 2L6.5 2.5L9 0Z"/><path d="M7.5 12.2L4.5 9.2L5.6 8.1L7.5 10L12.4 5.1L13.5 6.2L7.5 12.2Z" fill="#ffffff"/></svg>
+                </span>
+              </div>
+              <p class="bot-status" id="bot-status-text">online</p>
+            </div>
+          </div>
+          <div class="header-actions">
+            <button class="header-icon-btn" aria-label="Start video call" title="Video call">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+            </button>
+            <button class="header-icon-btn" aria-label="Start voice call" title="Voice call">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.28-.28.37-.68.25-1.02A11.36 11.36 0 0 1 8.5 4.31c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-.99-1.43z"/></svg>
+            </button>
+            <button class="header-icon-btn" id="menu-dropdown-btn" aria-label="More options" title="Menu">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            </button>
+          </div>
+        </header>
+
+        <!-- WhatsApp Messages Canvas -->
+        <section class="chat-canvas" id="chat-canvas" aria-label="WhatsApp conversation thread" tabindex="0">
+          <div class="encryption-pill" role="note">
+            <span class="lock-icon">🔒</span>
+            <span>Messages are end-to-end encrypted. No one outside of this chat can read them. Official Krishi-Line Nashik Onion Procurement Service.</span>
+          </div>
+
+          <div class="date-divider">
+            <span>TODAY</span>
+          </div>
+
+          <!-- Dynamic Chat Messages List -->
+          <div class="messages-list" id="messages-list">
+            <!-- Messages will be rendered here dynamically -->
+          </div>
+
+          <!-- Typing Indicator Bubble -->
+          <div class="message-row incoming typing-row" id="typing-indicator" style="display: none;">
+            <div class="message-bubble typing-bubble">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- WhatsApp Input Footer -->
+        <footer class="chat-footer">
+          <form id="chat-form" class="input-form">
+            <button type="button" class="tool-btn" aria-label="Add emoji" title="Emoji">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#8696a0"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
+            </button>
+            <button type="button" class="tool-btn" aria-label="Attach file" title="Attach">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="#8696a0"><path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5a2.5 2.5 0 0 1 5 0v10.5c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V6H9v9.5a3 3 0 0 0 6 0V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z"/></svg>
+            </button>
+            
+            <label for="chat-input" class="visually-hidden">Type a message</label>
+            <textarea
+              id="chat-input"
+              rows="1"
+              placeholder="Type a message..."
+              autocomplete="off"
+              spellcheck="true"
+            ></textarea>
+
+            <button type="submit" class="send-action-btn" id="send-btn" aria-label="Send message" title="Send message">
+              <svg id="send-icon" viewBox="0 0 24 24" width="22" height="22" fill="#ffffff"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              <svg id="mic-icon" viewBox="0 0 24 24" width="22" height="22" fill="#ffffff" style="display: none;"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.1-.6-.39-1.14-1-1.14z"/></svg>
+            </button>
+          </form>
+        </footer>
+      </div>
+    </main>
+
+    <!-- Side Control Deck & Mandi Gate Inspector -->
+    <aside class="control-panel" aria-label="Testing Console & Mandi Inspector">
+      <div class="panel-header">
+        <div class="panel-title-group">
+          <span class="panel-badge">LOCAL SIMULATOR</span>
+          <h2>Testing Console & Mandi Gate Inspector</h2>
+        </div>
+        <p class="panel-subtitle">Simulate real WhatsApp chats with Nashik farmers & verify gate QR passes.</p>
+      </div>
+
+      <!-- Farmer Identity Switcher -->
+      <section class="panel-section">
+        <h3 class="section-title">
+          <span class="icon">👤</span> Active Farmer Identity
+        </h3>
+        <div class="farmer-picker">
+          <label for="farmer-select" class="visually-hidden">Choose Farmer Persona</label>
+          <select id="farmer-select" class="form-select">
+            <option value="farmer-001">farmer-001 | Ramesh Patil (Lasalgaon, Nashik)</option>
+            <option value="farmer-002">farmer-002 | Sunil Shinde (Pimpalgaon, Nashik)</option>
+            <option value="farmer-003">farmer-003 | Balasaheb Gite (Chandwad, Nashik)</option>
+            <option value="custom">+ Custom Farmer ID</option>
+          </select>
+        </div>
+        
+        <div class="custom-farmer-input-row" id="custom-farmer-row" style="display: none;">
+          <input type="text" id="custom-farmer-input" class="form-input" placeholder="e.g. farmer-nashik-99" />
+          <button type="button" id="apply-custom-farmer-btn" class="btn btn-secondary">Switch</button>
+        </div>
+
+        <!-- Live Profile Card -->
+        <div class="farmer-profile-card" id="farmer-profile-card">
+          <div class="profile-row">
+            <span class="profile-label">Farmer ID:</span>
+            <span class="profile-value" id="disp-farmer-id">farmer-001</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-label">Registration:</span>
+            <span class="profile-badge badge-pending" id="disp-reg-status">Checking...</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-label">Current State:</span>
+            <span class="profile-tag" id="disp-state">MAIN_MENU</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- One-Click Fast Test Scenarios -->
+      <section class="panel-section">
+        <h3 class="section-title">
+          <span class="icon">⚡</span> Quick Test Flows
+        </h3>
+        <div class="quick-actions-grid">
+          <button type="button" class="btn-action" id="btn-quick-greet" title="Send Hi">
+            <span class="btn-emoji">👋</span>
+            <span class="btn-label">1. Send "Hi" (Menu)</span>
+          </button>
+          <button type="button" class="btn-action" id="btn-quick-register" title="Automate Registration">
+            <span class="btn-emoji">🌾</span>
+            <span class="btn-label">2. Auto-Register</span>
+          </button>
+          <button type="button" class="btn-action" id="btn-quick-book" title="Book Slot">
+            <span class="btn-emoji">🧅</span>
+            <span class="btn-label">3. Book Morning Slot</span>
+          </button>
+          <button type="button" class="btn-action" id="btn-quick-mybooking" title="View Booking">
+            <span class="btn-emoji">📋</span>
+            <span class="btn-label">4. My Booking (3)</span>
+          </button>
+          <button type="button" class="btn-action" id="btn-quick-procstatus" title="Procurement Status">
+            <span class="btn-emoji">📊</span>
+            <span class="btn-label">5. Procurement (4)</span>
+          </button>
+          <button type="button" class="btn-action" id="btn-quick-paystatus" title="Payment Status">
+            <span class="btn-emoji">💰</span>
+            <span class="btn-label">6. Payment DBT (5)</span>
+          </button>
+          <button type="button" class="btn-action btn-action-accent" id="btn-quick-menu" title="Reset to Menu">
+            <span class="btn-emoji">🔄</span>
+            <span class="btn-label">Send "MENU"</span>
+          </button>
+          <button type="button" class="btn-action btn-action-danger" id="btn-clear-chat" title="Clear Screen">
+            <span class="btn-emoji">🧹</span>
+            <span class="btn-label">Clear Chat Window</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Mandi Gate QR Pass Scanner & Verifier -->
+      <section class="panel-section gate-section">
+        <h3 class="section-title">
+          <span class="icon">🔍</span> Mandi Gate QR Scanner (Verification API)
+        </h3>
+        <p class="section-desc">Simulates APMC security at Lasalgaon / Pimpalgaon gate verifying <code>POST /api/bookings/verify</code>.</p>
+        
+        <div class="verify-form">
+          <label for="token-input" class="form-label">Scan/Paste QR Token (<code>kl_tok_...</code>):</label>
+          <div class="token-input-group">
+            <input type="text" id="token-input" class="form-input" placeholder="Token will auto-fill on booking..." />
+            <button type="button" id="btn-verify-token" class="btn btn-primary">Verify Token</button>
+          </div>
+        </div>
+
+        <div class="verification-result-box" id="verification-result-box">
+          <div class="verify-idle">
+            <span class="scanner-icon">📷</span>
+            <span>Awaiting token scan or booking confirmation...</span>
+          </div>
+        </div>
+
+        <!-- Booking Lifecycle Testing Controls -->
+        <div class="lifecycle-controls" id="lifecycle-controls" style="display: none;">
+          <span class="controls-label">Test Booking Lifecycle:</span>
+          <div class="lifecycle-btn-group">
+            <button type="button" class="btn-mini btn-cancel" id="btn-mark-cancelled" title="Simulate Cancellation">❌ Cancel Booking</button>
+            <button type="button" class="btn-mini btn-arrived" id="btn-mark-arrived" title="Simulate Gate Arrival">🚛 Mark Arrived</button>
+            <button type="button" class="btn-mini btn-completed" id="btn-mark-completed" title="Simulate Weighed & Done">✅ Mark Completed</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Backend Connection Status -->
+      <footer class="panel-footer">
+        <div class="connection-status">
+          <span class="status-indicator online" id="backend-indicator"></span>
+          <span id="backend-status-text">Backend connected (localhost:3000)</span>
+        </div>
+        <a href="/health" target="_blank" class="health-link" rel="noopener">Check /health JSON</a>
+      </footer>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

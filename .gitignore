@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Environment Variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Generated QR codes
+public/qrcodes/*.png
+!public/qrcodes/.gitkeep
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
