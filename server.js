@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Root route: Redirect browser visitors directly to the interactive WhatsApp Simulator
 app.get('/', (req, res) => {
-  res.redirect('/simulator');
+  res.redirect('/simulator/');
 });
 
 // Health check route: returns JSON status
