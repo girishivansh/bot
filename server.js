@@ -12,9 +12,9 @@ const PORT = process.env.PORT || 3000;
 // Enable JSON request body parsing
 app.use(express.json());
 
-// Root route: confirms the backend service is running
+// Root route: Redirect browser visitors directly to the interactive WhatsApp Simulator
 app.get('/', (req, res) => {
-  res.status(200).send('Krishi-Line Backend is running.');
+  res.redirect('/simulator');
 });
 
 // Health check route: returns JSON status
